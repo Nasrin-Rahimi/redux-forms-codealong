@@ -19,6 +19,10 @@ class CreateTodo extends Component {
   handleSubmit = event => {
     event.preventDefault()
     this.props.addTodo(this.state)
+    //OR if not given any arguments, connect will return dispatch 
+    //as a prop to the component we're wrapping with connect.
+    //this.props.dispatch({ type: 'ADD_TODO', payload: this.state });
+    //And then export default connect()(CreateTodo); 
   }
 
   render() {
